@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ObjectMapper-Plugin.xcodeproj">
+      location = "group:/Users/gao/m/Mappable_xcode_plugin/Mappable_xcode_plugin.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

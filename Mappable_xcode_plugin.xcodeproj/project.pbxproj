@@ -82,7 +82,7 @@
 		FF4AC9901E1603DB000FC377 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FF4AC9921E160412000FC377 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		FFC9A1F61E163F1400CD6959 /* ImmutableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmutableModel.swift; sourceTree = "<group>"; };
-		FFDD14C61E136198004FCF92 /* ObjectMapper-Plugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjectMapper-Plugin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDD14C61E136198004FCF92 /* Mappable_xcode_plugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mappable_xcode_plugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDD14C91E136198004FCF92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFDD14CB1E136198004FCF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDD14CE1E136198004FCF92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		FFDD14C71E136198004FCF92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFDD14C61E136198004FCF92 /* ObjectMapper-Plugin.app */,
+				FFDD14C61E136198004FCF92 /* Mappable_xcode_plugin.app */,
 				FFDD14DA1E1361D2004FCF92 /* ExCommand.appex */,
 			);
 			name = Products;
@@ -237,9 +237,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FFDD14C51E136198004FCF92 /* ObjectMapper-Plugin */ = {
+		FFDD14C51E136198004FCF92 /* Mappable_xcode_plugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFDD14D31E136198004FCF92 /* Build configuration list for PBXNativeTarget "ObjectMapper-Plugin" */;
+			buildConfigurationList = FFDD14D31E136198004FCF92 /* Build configuration list for PBXNativeTarget "Mappable_xcode_plugin" */;
 			buildPhases = (
 				33B3E052D29008AE9CA2CFA8 /* [CP] Check Pods Manifest.lock */,
 				FFDD14C21E136198004FCF92 /* Sources */,
@@ -253,9 +253,9 @@
 			dependencies = (
 				FFDD14E71E1361D3004FCF92 /* PBXTargetDependency */,
 			);
-			name = "ObjectMapper-Plugin";
+			name = Mappable_xcode_plugin;
 			productName = "ObjectMapper-Plugin";
-			productReference = FFDD14C61E136198004FCF92 /* ObjectMapper-Plugin.app */;
+			productReference = FFDD14C61E136198004FCF92 /* Mappable_xcode_plugin.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FFDD14D91E1361D2004FCF92 /* ExCommand */ = {
@@ -299,7 +299,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FFDD14C11E136198004FCF92 /* Build configuration list for PBXProject "ObjectMapper-Plugin" */;
+			buildConfigurationList = FFDD14C11E136198004FCF92 /* Build configuration list for PBXProject "Mappable_xcode_plugin" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -312,7 +312,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FFDD14C51E136198004FCF92 /* ObjectMapper-Plugin */,
+				FFDD14C51E136198004FCF92 /* Mappable_xcode_plugin */,
 				FFDD14D91E1361D2004FCF92 /* ExCommand */,
 			);
 		};
@@ -646,7 +646,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FFDD14C11E136198004FCF92 /* Build configuration list for PBXProject "ObjectMapper-Plugin" */ = {
+		FFDD14C11E136198004FCF92 /* Build configuration list for PBXProject "Mappable_xcode_plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FFDD14D11E136198004FCF92 /* Debug */,
@@ -655,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFDD14D31E136198004FCF92 /* Build configuration list for PBXNativeTarget "ObjectMapper-Plugin" */ = {
+		FFDD14D31E136198004FCF92 /* Build configuration list for PBXNativeTarget "Mappable_xcode_plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FFDD14D41E136198004FCF92 /* Debug */,
