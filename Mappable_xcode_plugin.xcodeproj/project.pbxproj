@@ -16,7 +16,7 @@
 		FFDD14CC1E136198004FCF92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDD14CB1E136198004FCF92 /* Assets.xcassets */; };
 		FFDD14CF1E136198004FCF92 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD14CD1E136198004FCF92 /* MainMenu.xib */; };
 		FFDD14DD1E1361D2004FCF92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDD14DC1E1361D2004FCF92 /* Cocoa.framework */; };
-		FFDD14E81E1361D3004FCF92 /* MappableHelperCommand.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFDD14DA1E1361D2004FCF92 /* MappableHelperCommand.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFDD14E81E1361D3004FCF92 /* Mappable helper.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFDD14DA1E1361D2004FCF92 /* Mappable helper.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FFDD14FD1E1361FF004FCF92 /* MappableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14EF1E1361FF004FCF92 /* MappableCommand.swift */; };
 		FFDD15001E1361FF004FCF92 /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14F31E1361FF004FCF92 /* Foundation+Ranges.swift */; };
 		FFDD15011E1361FF004FCF92 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14F41E1361FF004FCF92 /* MatchResult.swift */; };
@@ -45,7 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FFDD14E81E1361D3004FCF92 /* MappableHelperCommand.appex in Embed App Extensions */,
+				FFDD14E81E1361D3004FCF92 /* Mappable helper.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +65,7 @@
 		FFDD14CB1E136198004FCF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDD14CE1E136198004FCF92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FFDD14D01E136198004FCF92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFDD14DA1E1361D2004FCF92 /* MappableHelperCommand.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MappableHelperCommand.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDD14DA1E1361D2004FCF92 /* Mappable helper.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mappable helper.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDD14DC1E1361D2004FCF92 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FFDD14E01E1361D2004FCF92 /* ExCommand.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExCommand.entitlements; sourceTree = "<group>"; };
 		FFDD14EF1E1361FF004FCF92 /* MappableCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableCommand.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				FFDD14C61E136198004FCF92 /* Mappable_xcode_plugin.app */,
-				FFDD14DA1E1361D2004FCF92 /* MappableHelperCommand.appex */,
+				FFDD14DA1E1361D2004FCF92 /* Mappable helper.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			);
 			name = MappableHelperCommand;
 			productName = ExCommand;
-			productReference = FFDD14DA1E1361D2004FCF92 /* MappableHelperCommand.appex */;
+			productReference = FFDD14DA1E1361D2004FCF92 /* Mappable helper.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -488,7 +488,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.leavez.mappable-xcode-plugin.command";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mappable helper";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -510,7 +510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.leavez.mappable-xcode-plugin.command";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mappable helper";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

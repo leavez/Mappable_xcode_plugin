@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FFDD14D91E1361D2004FCF92"
-               BuildableName = "MappableHelperCommand.appex"
+               BuildableName = "Mappable helper.appex"
                BlueprintName = "MappableHelperCommand"
                ReferencedContainer = "container:Mappable_xcode_plugin.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FFDD14D91E1361D2004FCF92"
-            BuildableName = "MappableHelperCommand.appex"
+            BuildableName = "Mappable helper.appex"
             BlueprintName = "MappableHelperCommand"
             ReferencedContainer = "container:Mappable_xcode_plugin.xcodeproj">
          </BuildableReference>
