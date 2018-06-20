@@ -9,7 +9,7 @@
 import Foundation
 import XcodeKit
 
-class ImmutableMappableCommand: NSObject, XCSourceEditorCommand {
+class MappableCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
 

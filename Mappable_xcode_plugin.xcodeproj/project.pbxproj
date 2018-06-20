@@ -26,7 +26,7 @@
 		FFDD14CF1E136198004FCF92 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFDD14CD1E136198004FCF92 /* MainMenu.xib */; };
 		FFDD14DD1E1361D2004FCF92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDD14DC1E1361D2004FCF92 /* Cocoa.framework */; };
 		FFDD14E81E1361D3004FCF92 /* ExCommand.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFDD14DA1E1361D2004FCF92 /* ExCommand.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FFDD14FD1E1361FF004FCF92 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14EF1E1361FF004FCF92 /* Command.swift */; };
+		FFDD14FD1E1361FF004FCF92 /* MappableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14EF1E1361FF004FCF92 /* MappableCommand.swift */; };
 		FFDD15001E1361FF004FCF92 /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14F31E1361FF004FCF92 /* Foundation+Ranges.swift */; };
 		FFDD15011E1361FF004FCF92 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14F41E1361FF004FCF92 /* MatchResult.swift */; };
 		FFDD15021E1361FF004FCF92 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDD14F51E1361FF004FCF92 /* Options.swift */; };
@@ -89,7 +89,7 @@
 		FFDD14DA1E1361D2004FCF92 /* ExCommand.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExCommand.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDD14DC1E1361D2004FCF92 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FFDD14E01E1361D2004FCF92 /* ExCommand.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExCommand.entitlements; sourceTree = "<group>"; };
-		FFDD14EF1E1361FF004FCF92 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		FFDD14EF1E1361FF004FCF92 /* MappableCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableCommand.swift; sourceTree = "<group>"; };
 		FFDD14F01E1361FF004FCF92 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFDD14F31E1361FF004FCF92 /* Foundation+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Ranges.swift"; sourceTree = "<group>"; };
 		FFDD14F41E1361FF004FCF92 /* MatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				FFDD14F01E1361FF004FCF92 /* Info.plist */,
 				FF4AC9901E1603DB000FC377 /* Model.swift */,
 				FF4AC9921E160412000FC377 /* Parser.swift */,
-				FFDD14EF1E1361FF004FCF92 /* Command.swift */,
+				FFDD14EF1E1361FF004FCF92 /* MappableCommand.swift */,
 				FFDD14FB1E1361FF004FCF92 /* SourceEditorExtension.swift */,
 				FFDD14F21E1361FF004FCF92 /* Source */,
 				FFDD14DF1E1361D2004FCF92 /* Supporting Files */,
@@ -279,7 +279,7 @@
 		FFDD14BE1E136198004FCF92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = LyhDev;
 				TargetAttributes = {
@@ -418,7 +418,7 @@
 				FFDD15001E1361FF004FCF92 /* Foundation+Ranges.swift in Sources */,
 				FFDD15041E1361FF004FCF92 /* Regex.swift in Sources */,
 				FFDD15031E1361FF004FCF92 /* Range+Compatibility.swift in Sources */,
-				FFDD14FD1E1361FF004FCF92 /* Command.swift in Sources */,
+				FFDD14FD1E1361FF004FCF92 /* MappableCommand.swift in Sources */,
 				FFDD15021E1361FF004FCF92 /* Options.swift in Sources */,
 				FFDD15061E1361FF004FCF92 /* ThreadLocal.swift in Sources */,
 				FF4AC9931E160412000FC377 /* Parser.swift in Sources */,
