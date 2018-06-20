@@ -1,0 +1,16 @@
+PODS:
+  - Mappable (1.2.1)
+
+DEPENDENCIES:
+  - Mappable
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Mappable
+
+SPEC CHECKSUMS:
+  Mappable: 3b0ee951fae981fe387a5bbfb835aa4644f3f8b7
+
+PODFILE CHECKSUM: fee2350df2b730b41b31a1158ee9df7543160049
+
+COCOAPODS: 1.5.0

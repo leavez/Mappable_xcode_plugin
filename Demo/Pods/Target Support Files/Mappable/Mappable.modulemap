@@ -1,0 +1,6 @@
+framework module Mappable {
+  umbrella header "Mappable-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,8 @@
+
+
+target 'Demo' do
+  use_frameworks!
+
+  pod "Mappable"
+
+end
