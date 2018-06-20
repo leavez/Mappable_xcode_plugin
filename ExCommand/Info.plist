@@ -43,7 +43,5 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.dt.Xcode.extension.source-editor</string>
 	</dict>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2016年 LyhDev. All rights reserved.</string>
 </dict>
 </plist>

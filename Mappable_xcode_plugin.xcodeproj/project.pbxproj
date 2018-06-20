@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6DE208300F564A9BB32E26C0 /* Pods_ExCommand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37591400C2E9C488A2A6B652 /* Pods_ExCommand.framework */; };
-		E801FB44FC950D1F1209B46F /* Pods_ObjectMapper_Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6B47D546EACF5895A2D719 /* Pods_ObjectMapper_Plugin.framework */; };
 		FF494D9C1E163D29001069FB /* MutableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF494D9B1E163D29001069FB /* MutableModel.swift */; };
 		FF4AC97F1E149FE1000FC377 /* ModelSample in Resources */ = {isa = PBXBuildFile; fileRef = FF4AC97E1E149FE1000FC377 /* ModelSample */; };
 		FF4AC9911E1603DB000FC377 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4AC9901E1603DB000FC377 /* Model.swift */; };
@@ -56,11 +54,7 @@
 
 /* Begin PBXFileReference section */
 		37591400C2E9C488A2A6B652 /* Pods_ExCommand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExCommand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E59747AA604A2874C5C7EA0 /* Pods-ExCommand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExCommand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExCommand/Pods-ExCommand.debug.xcconfig"; sourceTree = "<group>"; };
 		6C6B47D546EACF5895A2D719 /* Pods_ObjectMapper_Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMapper_Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83F1E92F004FAD06BDF26911 /* Pods-ExCommand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExCommand.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExCommand/Pods-ExCommand.release.xcconfig"; sourceTree = "<group>"; };
-		863A74675A6DFBA36241254F /* Pods-ObjectMapper-Plugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapper-Plugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapper-Plugin/Pods-ObjectMapper-Plugin.release.xcconfig"; sourceTree = "<group>"; };
-		A6BC7505735AFD6AF05B5E7B /* Pods-ObjectMapper-Plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectMapper-Plugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectMapper-Plugin/Pods-ObjectMapper-Plugin.debug.xcconfig"; sourceTree = "<group>"; };
 		FF494D9B1E163D29001069FB /* MutableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableModel.swift; sourceTree = "<group>"; };
 		FF4AC97E1E149FE1000FC377 /* ModelSample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ModelSample; sourceTree = "<group>"; };
 		FF4AC9901E1603DB000FC377 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -92,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E801FB44FC950D1F1209B46F /* Pods_ObjectMapper_Plugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,24 +94,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDD14DD1E1361D2004FCF92 /* Cocoa.framework in Frameworks */,
-				6DE208300F564A9BB32E26C0 /* Pods_ExCommand.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		254A3B06266F772E50742D11 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A6BC7505735AFD6AF05B5E7B /* Pods-ObjectMapper-Plugin.debug.xcconfig */,
-				863A74675A6DFBA36241254F /* Pods-ObjectMapper-Plugin.release.xcconfig */,
-				5E59747AA604A2874C5C7EA0 /* Pods-ExCommand.debug.xcconfig */,
-				83F1E92F004FAD06BDF26911 /* Pods-ExCommand.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		FFDD14BD1E136198004FCF92 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +107,6 @@
 				FFDD14DE1E1361D2004FCF92 /* MappableHelperCommand */,
 				FFDD14DB1E1361D2004FCF92 /* Frameworks */,
 				FFDD14C71E136198004FCF92 /* Products */,
-				254A3B06266F772E50742D11 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,12 +188,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFDD14D31E136198004FCF92 /* Build configuration list for PBXNativeTarget "Mappable_xcode_plugin" */;
 			buildPhases = (
-				33B3E052D29008AE9CA2CFA8 /* [CP] Check Pods Manifest.lock */,
 				FFDD14C21E136198004FCF92 /* Sources */,
 				FFDD14C31E136198004FCF92 /* Frameworks */,
 				FFDD14C41E136198004FCF92 /* Resources */,
 				FFDD14EC1E1361D3004FCF92 /* Embed App Extensions */,
-				7C9EC94BC0F6DCCB47F014DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,7 +207,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFDD14E91E1361D3004FCF92 /* Build configuration list for PBXNativeTarget "MappableHelperCommand" */;
 			buildPhases = (
-				A8A633206637F2923B68E7D0 /* [CP] Check Pods Manifest.lock */,
 				FFDD14D61E1361D2004FCF92 /* Sources */,
 				FFDD14D71E1361D2004FCF92 /* Frameworks */,
 				FFDD14D81E1361D2004FCF92 /* Resources */,
@@ -304,63 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		33B3E052D29008AE9CA2CFA8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ObjectMapper-Plugin-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C9EC94BC0F6DCCB47F014DD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapper-Plugin/Pods-ObjectMapper-Plugin-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapper-Plugin/Pods-ObjectMapper-Plugin-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8A633206637F2923B68E7D0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ExCommand-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFDD14C21E136198004FCF92 /* Sources */ = {
@@ -521,7 +441,6 @@
 		};
 		FFDD14D41E136198004FCF92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6BC7505735AFD6AF05B5E7B /* Pods-ObjectMapper-Plugin.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
@@ -531,7 +450,7 @@
 				DEVELOPMENT_TEAM = Q848C6M954;
 				INFOPLIST_FILE = Mappable_xcode_plugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.copycat.ObjectMapper-Plugin";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.leavez.mappable-xcode-plugin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -540,7 +459,6 @@
 		};
 		FFDD14D51E136198004FCF92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 863A74675A6DFBA36241254F /* Pods-ObjectMapper-Plugin.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
@@ -550,7 +468,7 @@
 				DEVELOPMENT_TEAM = Q848C6M954;
 				INFOPLIST_FILE = Mappable_xcode_plugin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.copycat.ObjectMapper-Plugin";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.leavez.mappable-xcode-plugin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -559,7 +477,6 @@
 		};
 		FFDD14EA1E1361D3004FCF92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E59747AA604A2874C5C7EA0 /* Pods-ExCommand.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -570,7 +487,7 @@
 				INFOPLIST_FILE = ExCommand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.copycat.ObjectMapper-Plugin.ExCommand";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.leavez.mappable-xcode-plugin.command";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -582,7 +499,6 @@
 		};
 		FFDD14EB1E1361D3004FCF92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83F1E92F004FAD06BDF26911 /* Pods-ExCommand.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -593,7 +509,7 @@
 				INFOPLIST_FILE = ExCommand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.copycat.ObjectMapper-Plugin.ExCommand";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.leavez.mappable-xcode-plugin.command";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";

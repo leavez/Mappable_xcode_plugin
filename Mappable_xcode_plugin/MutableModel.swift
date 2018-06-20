@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import ObjectMapper
 
 class MutableModel: NSObject {
     
