@@ -690,25 +690,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0O5-8w-wJY">
-                        <rect key="frame" x="86" y="146" width="308" height="17"/>
+                        <rect key="frame" x="86" y="146" width="320" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="menu only appear when you're viewing a swift file." id="DBC-92-QNx">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="menu only appear when you're viewing a source file." id="DBC-92-QNx">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9J-js-8Wz">
-                        <rect key="frame" x="15" y="171" width="450" height="19"/>
+                        <rect key="frame" x="86" y="171" width="345" height="57"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Restart xcode, and you'll find the new action in `Editor` menu" id="f5h-tD-uCj">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="f5h-tD-uCj">
                             <font key="font" size="16" name=".AppleSystemUIFont"/>
+                            <string key="title">Close this app,
+Restart xcode,
+and you'll find the new action in `Editor` menu.</string>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="50" y="-122"/>
         </window>
     </objects>
 </document>
