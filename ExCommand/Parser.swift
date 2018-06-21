@@ -23,13 +23,13 @@ class Parser: NSObject {
         
         /// Clean `/* */`
         if let regex = try? Regex.init(string: "/\\*.*?\\*/") {
-            let range = NSRange.init(location: 0, length: contentStr.length)
+            let range = NSRange.init(location: 0, length: contentStr.count)
             contentStr = regex.regularExpression.stringByReplacingMatches(in: contentStr, range: range, withTemplate: "")
         }
         
         /// Clean `//`
         if let regex = try? Regex.init(string: "//[^\r\n]*") {
-            let range = NSRange.init(location: 0, length: contentStr.length)
+            let range = NSRange.init(location: 0, length: contentStr.count)
             contentStr = regex.regularExpression.stringByReplacingMatches(in: contentStr, range: range, withTemplate: "")
         }
         
@@ -167,11 +167,3 @@ class Parser: NSObject {
 }
 
 
-
-
-extension String {
-    
-    var length: Int {
-        return count
-    }
-}

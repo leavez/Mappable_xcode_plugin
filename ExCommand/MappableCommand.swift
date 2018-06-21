@@ -9,69 +9,101 @@
 import Foundation
 import XcodeKit
 
+struct Keywords {
+    static let `protocol` = "Mappable"
+    static let initDeclare = "init(map: Mapper) throws"
+    static let mapFunction = "try map.from"
+
+}
+
 class MappableCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
 
         
-        let lines: [String] = invocation.buffer.lines.compactMap { "\($0)" }
+        guard let lines = invocation.buffer.lines as? [String] else {
+            return
+        }
         
         var classModelImpl: [(Int, String)] = []
-        
         let metadatas = Parser().parse(buffer: lines)
         
         for case let Metadata.model(range, elements) in metadatas {
             
             let modelBuffer = Array(lines[range])
             let pattern = ".*(struct|class)\\s+(\\w+)([^{\\n]*)"
-            if let regex = try? Regex(string: pattern), let matche = regex.match(modelBuffer[0]) {
-                
-                let isStruct = matche.captures[0] == "struct"
-                let modelName = matche.captures[1]!
-                
-                if matche.captures[0] == "class" {
-                    let protocolStr = matche.captures[2]!.contains(":") ? ", ImmutableMappable " : ": ImmutableMappable "
+            if let regex = try? Regex(string: pattern), let match = regex.match(modelBuffer[0]) {
+
+                let typeString = match.captures[0]! // struct or class
+                let modelNameString = match.captures[1]!
+                let inheritanceString = match.captures[2]!
+
+
+                // protocol conforming
+                let isStruct = (typeString == "struct")
+                if !isStruct {
+                    let protocolStr = inheritanceString.contains(":") ? ", \(Keywords.protocol)" : ": \(Keywords.protocol)"
                     var str = modelBuffer[0]
-                    str.replaceSubrange(matche.range, with: matche.matchedString + protocolStr)
+                    str.replaceSubrange(match.range, with: match.matchedString + protocolStr)
                     invocation.buffer.lines[range.lowerBound] = str
                 }
-                
-                var initial = String(format: "\n\n\t%@ init(map: Map) throws {", isStruct ? "" : "required ")
-                var mapping = String(format: "\n\n\t%@func mapping(map: Map) {", isStruct ? "mutating " : "")
-                for case let Metadata.property(lineNumber) in elements {
+
+                // auto-implemented initializer
+                var initializerString = String(format: "\n\n\t%@\(Keywords.initDeclare) {\n", isStruct ? "" : "required ")
+
+                let propertyNames: [String] = elements.allPropertiesLineNumbers.compactMap { lineNumber in
                     if let regex = try? Regex(string: "(.*)(let|var)\\s+(\\w+)\\s*:"),
-                        let matche = regex.match(modelBuffer[lineNumber+1]) {
-                        if matche.captures[0]!.contains("static") {
-                            continue
+                        let match = regex.match(modelBuffer[lineNumber+1]) {
+                        if match.captures[0]!.contains("static") {
+                            return nil
                         }
-                        let value = matche.captures[2]!
-                        if matche.captures[1] == "var" {
-                            mapping += String(format: "\n\t\t%-20s <- map[\"%@\"]", (value as NSString).utf8String!, value)
-                        } else {
-                            mapping += String(format: "\n\t\t%-20s >>> map[\"%@\"]", (value as NSString).utf8String!, value)
-                        }
-                        
-                        initial += String(format: "\n\t\t%-20s = try map.value(\"%@\")", (value as NSString).utf8String!, value)
-                        
+                        let name = match.captures[2]!
+                        return name
                     }
+                    return nil
                 }
-                initial += "\n\t}"
-                mapping += "\n\t}"
-                
+                let maxLength = propertyNames.map{ $0.count }.max() ?? 0
+
+                initializerString += propertyNames.map {
+                    (property: $0 + String(repeating: " ", count: maxLength - $0.count) , key: $0)
+                }.map{
+                    "\t\t\($0.property) = \(Keywords.mapFunction)(\"\($0.key)\")"
+                }.joined(separator: "\n")
+
+                initializerString += "\n\t}"
+
+
+                // add
                 if isStruct {
-                    let protocolImpl = String(format: "\n\nextension %@: ImmutableMappable {%@%@\n}", modelName, initial, mapping)
+                    let protocolImpl = "\n\nextension \(modelNameString): \(Keywords.protocol) {\(initializerString)\n}"
                     invocation.buffer.lines.add(protocolImpl)
                 } else {
-                    let protocolImpl = String(format: "%@%@", initial, mapping)
+                    let protocolImpl = initializerString
                     classModelImpl.append((range.upperBound-1, protocolImpl))
                 }
             }
         }
         
-        classModelImpl.sort { (args1, args2) -> Bool in return args1.0 > args2.0 }
-        for (index, impl) in classModelImpl {
+        for (index, impl) in classModelImpl.sorted(by: { $0.0 > $1.0 }) {
             invocation.buffer.lines.insert(impl, at: index)
         }
         
-        completionHandler(nil)    }
+        completionHandler(nil)
+    }
+}
+
+
+
+extension Array where Element == Metadata {
+
+    var allPropertiesLineNumbers: [Int] {
+        return self.compactMap {
+            switch $0 {
+            case .property(let lineNumber):
+                return lineNumber
+            case _:
+                return nil
+            }
+        }
+    }
 }
