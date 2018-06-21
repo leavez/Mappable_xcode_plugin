@@ -8,14 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Mappable{
 
+
+    required init(map: Mapper) throws {
+
+    }
 }
 
 import Mappable
 
-class A: Mappable {
-    required init(map: Mapper) throws {
-    }
+class A {
+    let a: Int
+    let bdalfj: String
+    let cd: A
+
+}
+
+struct A : Mappable{
+    let a: Int
+    let bdalfj: String
+    let cd: A
 }
 

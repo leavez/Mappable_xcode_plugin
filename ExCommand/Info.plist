@@ -36,6 +36,14 @@
 					<key>XCSourceEditorCommandName</key>
 					<string>Auto generate Mappable implementation</string>
 				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).MappableCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectedMappableCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>generate Mappable implementation for selections</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>

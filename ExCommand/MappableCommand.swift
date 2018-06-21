@@ -24,11 +24,31 @@ class MappableCommand: NSObject, XCSourceEditorCommand {
         guard let lines = invocation.buffer.lines as? [String] else {
             return
         }
+
+
+        let selectedRanges = invocation.buffer.selections as? [XCSourceTextRange]
+        let haveSelectedRanges: Bool = {
+            let doForSelection = invocation.commandIdentifier.contains("Selected")
+            if doForSelection {
+                return selectedRanges != nil && selectedRanges!.count > 0
+            } else {
+                let empty = selectedRanges.map{ $0.isRangesEmpty } ?? true
+                return !empty
+            }
+        }()
+
+
         
         var classModelImpl: [(Int, String)] = []
         let metadatas = Parser().parse(buffer: lines)
         
         for case let Metadata.model(range, elements) in metadatas {
+
+            if let selectedRanges = selectedRanges,
+                haveSelectedRanges,
+                selectedRanges.first(where:{ $0.toRange.clamped(to: range).count > 0 }) == nil {
+                continue
+            }
             
             let modelBuffer = Array(lines[range])
             let pattern = ".*(struct|class)\\s+(\\w+)([^{\\n]*)"
@@ -49,7 +69,7 @@ class MappableCommand: NSObject, XCSourceEditorCommand {
                 }
 
                 // auto-implemented initializer
-                var initializerString = String(format: "\n\n\t%@\(Keywords.initDeclare) {\n", isStruct ? "" : "required ")
+                var initializerString = String(format: "\n\t%@\(Keywords.initDeclare) {\n", isStruct ? "" : "required ")
 
                 let propertyNames: [String] = elements.allPropertiesLineNumbers.compactMap { lineNumber in
                     if let regex = try? Regex(string: "(.*)(let|var)\\s+(\\w+)\\s*:"),
@@ -107,3 +127,25 @@ extension Array where Element == Metadata {
         }
     }
 }
+
+extension XCSourceTextRange {
+    var toRange: Range<Int> {
+        return Range(start.line...end.line)
+    }
+}
+
+extension Array where Element == XCSourceTextRange {
+    var isRangesEmpty: Bool {
+        if self.count == 0 {
+            return false
+        }
+        if self.count == 1 {
+            let start = self.first?.start
+            let end = self.first?.end
+            return start?.line == end?.line && start?.column == end?.column
+        }
+        return false
+    }
+}
+
+
